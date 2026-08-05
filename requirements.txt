@@ -1,4 +1,10 @@
-pyrogram
+Pyrogram
 tgcrypto
 requests
 yt-dlp
+Pillow
+bs4
+aiohttp
+motor
+pymongo
+asyncio
