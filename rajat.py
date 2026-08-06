@@ -35,7 +35,6 @@ API_ID = 31937622
 API_HASH = "1d9b89edeccb63cc3936876054953698"
 BOT_TOKEN = "8603916772:AAFMmMQvfuU2gZ_XILHDtekj-VJdBxkyfAI"
 OWNER_USERNAME = "Kya_bacche"
-OWNER_ID = 8714260394
 # Sudo/Owner IDs (Add authorized user IDs here)
 SUDO_USERS = {123456789, OWNER_ID}
 START_GIF_URL = \
@@ -1804,10 +1803,15 @@ async def message_dispatcher_handler(client: Client, message: Message):
         print(f"Message Dispatcher Error: {e}")
 def lightning_download_ytdlp(query):
     ydl_opts = {
-        'format': 'bestaudio', 'outtmpl': '%(id)s.%(ext)s', 'quiet': True, 'noplaylist': True,
-        'socket_timeout': 15, 'writethumbnail': True,
-        'postprocessors': [{'key': 'FFmpegExtractAudio', 'preferredcodec': 'mp3', 'preferredquality': '192'}, {'key': 'EmbedThumbnail'}]
-    }
+    'format': 'bestaudio', 
+    'outtmpl': '%(id)s.%(ext)s', 
+    'quiet': True, 
+    'noplaylist': True,
+    'cookiefile': 'cookies.txt',
+    'socket_timeout': 15, 
+    'writethumbnail': True,
+    'postprocessors': [{'key': 'FFmpegExtractAudio', 'preferredcodec': 'mp3', 'preferredquality': '192'}, {'key': 'EmbedThumbnail'}]
+}
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
             info = ydl.extract_info(f"ytsearch1:{query}", download=True)
