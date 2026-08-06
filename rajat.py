@@ -35,9 +35,9 @@ API_ID = 31937622
 API_HASH = "1d9b89edeccb63cc3936876054953698"
 BOT_TOKEN = "8603916772:AAFMmMQvfuU2gZ_XILHDtekj-VJdBxkyfAI"
 OWNER_USERNAME = "Kya_bacche"
-OWNER_ID = [8714260394]
+OWNER_ID = 8714260394
 # Sudo/Owner IDs (Add authorized user IDs here)
-SUDO_USERS = {123456789, OWNER_ID}
+SUDO_USERS = {123456789, 8714260394}
 START_GIF_URL = \
 "https://giffiles.alphacoders.com/221/thumb-440-221968.mp4"
 MINI_APP_URL = "https://powermusic.vercel.app/"
